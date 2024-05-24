@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 px-16 py-6">
+    <h1 class="text-5xl font-bold text-center my-3">Shopping Cart</h1>
+    <h2 class="text-2xl font-bold text-left">Add Item for selection</h2>
+
+    <form action="" id="form" class="flex gap-3 justify-between">
+      <!--Product Name-->
+      <div>
+        <label for="product_name">Product Name:</label>
+        <input
+          id="productName"
+          type="text"
+          class="border border-gray-300 rounded-md"
+        />
+      </div>
+
+      <!--Price-->
+      <div>
+        <label for="price">Price:</label>
+        <input
+          type="number"
+          id="price"
+          min="0"
+          step="1"
+          class="border border-gray-300 rounded-md w-44"
+        />
+      </div>
+
+      <!--IMG-->
+      <div>
+        <div>
+          <label for="imgurl">Image URL:</label>
+          <input
+            type="url"
+            id="imgurl"
+            class="border border-gray-300 rounded-md"
+          />
+        </div>
+      </div>
+
+      <!--btn create-->
+      <button
+        type="submit"
+        class="bg-blue-500 px-4 text-white rounded-md hover:bg-blue-600 hover:ring hover:ring-blue-300"
+      >
+        Create Product
+      </button>
+      <!--btn reset-->
+      <button
+        type="reset"
+        class="bg-white text-red-600 px-4 rounded-md ring ring-red-500 hover:bg-red-600 hover:text-white hover:ring hover:ring-red-300"
+      >
+        Reset
+      </button>
+    </form>
+    <!-- displaySection -->
+    <section
+      id="displaySection"
+      class="mt-6 max-w-md mx-auto space-y-4 sr"
+    ></section>
+
+    <button
+      id="addbtn"
+      class="bg-green-500 px-4 text-white rounded-md hover:bg-green-600 hover:ring hover:ring-green-300"
+    >
+      Add to Cart
+    </button>
+    <section id="displayCart" class="mt-6 max-w-md mx-auto space-y-4"></section>
+    <div id="btnCal"></div>
+    <!-- <h2 id="total">You have to pay:</h2> -->
+    <div id="totalSection"></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
