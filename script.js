@@ -119,21 +119,8 @@ function removeCard(productId) {
   displayCart(cart);
 }
 
-function calculateSelector(event) {
-  const checkbox = event.target;
-  const checkboxId = parseInt(checkbox.getAttribute("data-id"));
-  const product = products.find((product) => product.id === checkboxId);
-
-  if (checkbox.checked) {
-    product.checked = true;
-  } else {
-    product.checked = false;
-  }
-}
-
 //calulate Btn
 function calulateBtn() {
-  // cart = products.filter((product) => product.checked && product.id !== -1);
   calculateFinal(cart);
 }
 
